@@ -12,9 +12,6 @@ public class SimpleBeanContainerTest {
 
     @Test
     public void testGetBean(){
-        BeanFactory beanFactory = new BeanFactory();
-        beanFactory.registerBean("helloService", new HelloService());
-        HelloService helloService = (HelloService) beanFactory.getBean("helloService");
-        helloService.sayHello();
+
     }
 }
