@@ -1,4 +1,4 @@
-package org.springframework.beans.factory.config;
+package org.springframework.beans.factory.beans.factory.config;
 
 /**
  * @author: Zhang hao yu

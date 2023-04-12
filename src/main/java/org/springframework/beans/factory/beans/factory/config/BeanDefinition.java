@@ -1,6 +1,6 @@
-package org.springframework.beans.factory.config;
+package org.springframework.beans.factory.beans.factory.config;
 
-import org.springframework.beans.factory.PropertyValues;
+import org.springframework.beans.factory.beans.PropertyValues;
 
 /**
  * @author: Zhang hao yu

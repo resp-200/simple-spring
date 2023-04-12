@@ -1,6 +1,6 @@
-package org.springframework.beans.factory.support;
+package org.springframework.beans.factory.beans.factory.support;
 
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.beans.factory.config.BeanDefinition;
 
 /**
  * BeanDefinition注册表接口
@@ -17,4 +17,6 @@ public interface BeanDefinitionRegistry {
 	 * @param beanDefinition
 	 */
 	void registerBeanDefinition(String beanName, BeanDefinition beanDefinition);
+
+    boolean containsBeanDefinition(String beanName);
 }
