@@ -5,17 +5,17 @@ package org.springframework.beans.factory.config;
  * @date: 2023/4/10
  **/
 public class BeanDefinition {
-    private String beanClass;
+    private Class beanClass;
 
-    public BeanDefinition(String beanClass) {
+    public BeanDefinition(Class beanClass) {
         this.beanClass = beanClass;
     }
 
-    public String getBeanClass() {
+    public Class getBeanClass() {
         return beanClass;
     }
 
-    public void setBeanClass(String beanClass) {
+    public void setBeanClass(Class beanClass) {
         this.beanClass = beanClass;
     }
 }
