@@ -1,9 +1,9 @@
-package org.springframework.beans.factory.support;
+package org.springframework.beans.factory.beans.factory.support;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
-import org.springframework.beans.factory.BeansException;
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.beans.BeansException;
+import org.springframework.beans.factory.beans.factory.config.BeanDefinition;
 
 /**
  * @author derekyi
