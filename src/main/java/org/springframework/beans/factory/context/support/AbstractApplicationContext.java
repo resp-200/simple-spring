@@ -30,6 +30,22 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
         beanFactory.preInstantiateSingletons();
     }
 
+    @Override
+    public void registerShutdownHook() {
+        Thread shutdownHook = new Thread(()->{
+            doClose();
+        });
+        Runtime.getRuntime().addShutdownHook(shutdownHook);
+    }
+
+    protected void doClose(){
+        destroyBeans();
+    }
+
+    private void destroyBeans() {
+        getBeanFactory().destroySingletons();
+    }
+
     private void registerBeanPostProcessors(ConfigurableListableBeanFactory beanFactory) {
         // 利用类型找出所有的BeanPostProcessor
         Map<String, BeanPostProcessor> beansOfType = beanFactory.getBeansOfType(BeanPostProcessor.class);

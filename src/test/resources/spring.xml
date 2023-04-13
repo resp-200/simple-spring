@@ -7,7 +7,7 @@
 		 http://www.springframework.org/schema/context
 		 http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-    <bean id="person" class="org.springframework.test.bean.Person">
+    <bean id="person" class="org.springframework.test.bean.Person" init-method="customInitMethod" destroy-method="customDestroyMethod">
         <property name="name" value="李四"/>
         <property name="age" value="18"/>
         <property name="car" ref="car"/>

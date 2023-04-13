@@ -9,14 +9,13 @@ import org.springframework.test.bean.Person;
  * @author: Zhang hao yu
  * @date: 2023/4/13
  **/
-public class ApplicationContextTest {
+public class InitDisposableTest {
 
     @Test
-    public void applicationXmlTest(){
+    public void testInit(){
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
-        Person person = (Person) applicationContext.getBean("person");
+        Person person = (Person)applicationContext.getBean("person");
         System.out.println(person);
-
         applicationContext.registerShutdownHook();
     }
 }

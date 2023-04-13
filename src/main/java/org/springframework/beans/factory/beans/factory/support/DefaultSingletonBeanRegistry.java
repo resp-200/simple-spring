@@ -1,7 +1,11 @@
 package org.springframework.beans.factory.beans.factory.support;
 
+import org.springframework.beans.factory.beans.BeansException;
+import org.springframework.beans.factory.beans.factory.DisposableBean;
 import org.springframework.beans.factory.beans.factory.config.SingletonBeanRegistry;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -11,6 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
  **/
 public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
     private final Map<String, Object> singletonObjects = new ConcurrentHashMap<>(256);
+    private final Map<String, DisposableBean> disposableBeans = new HashMap<>();
 
 
     @Override
@@ -22,5 +27,19 @@ public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
         singletonObjects.put(beanName, singletonObject);
     }
 
+    public void registerDisposableBean(String beanName, DisposableBean bean) {
+        disposableBeans.put(beanName, bean);
+    }
 
+    public void destroySingletons() {
+        ArrayList<String> beanNames = new ArrayList<>(disposableBeans.keySet());
+        for (String beanName : beanNames) {
+            DisposableBean disposableBean = disposableBeans.remove(beanName);
+            try {
+                disposableBean.destroy();
+            } catch (Exception e) {
+                throw new BeansException("Destroy method on bean with name '" + beanName + "' threw an exception", e);
+            }
+        }
+    }
 }
