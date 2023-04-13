@@ -2,12 +2,12 @@ package org.springframework.test.ioc;
 
 import cn.hutool.core.io.IoUtil;
 import org.junit.Test;
-import org.springframework.beans.factory.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.beans.factory.core.io.DefaultResourceLoader;
-import org.springframework.beans.factory.core.io.FileSystemResource;
-import org.springframework.beans.factory.core.io.Resource;
-import org.springframework.beans.factory.core.io.UrlResource;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.core.io.DefaultResourceLoader;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.test.bean.Person;
 
 import java.io.IOException;

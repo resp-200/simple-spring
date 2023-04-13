@@ -1,11 +1,11 @@
 package org.springframework.test.common;
 
-import org.springframework.beans.factory.beans.BeansException;
-import org.springframework.beans.factory.beans.PropertyValue;
-import org.springframework.beans.factory.beans.PropertyValues;
-import org.springframework.beans.factory.beans.factory.ConfigurableListableBeanFactory;
-import org.springframework.beans.factory.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.PropertyValue;
+import org.springframework.beans.PropertyValues;
+import org.springframework.beans.factory.ConfigurableListableBeanFactory;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 
 /**
  * @author: Zhang hao yu

@@ -1,10 +1,10 @@
 package org.springframework.test.service;
 
-import org.springframework.beans.factory.beans.BeansException;
-import org.springframework.beans.factory.beans.factory.BeanFactory;
-import org.springframework.beans.factory.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.context.ApplicationContext;
-import org.springframework.beans.factory.context.ApplicationContextAware;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 
 /**
  * @author: Zhang hao yu

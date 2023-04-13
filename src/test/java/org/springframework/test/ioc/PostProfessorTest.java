@@ -1,8 +1,8 @@
 package org.springframework.test.ioc;
 
 import org.junit.Test;
-import org.springframework.beans.factory.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.test.bean.Person;
 import org.springframework.test.common.CustomBeanFactoryPostProcessor;
 import org.springframework.test.common.CustomBeanPostProcessor;

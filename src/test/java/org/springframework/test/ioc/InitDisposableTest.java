@@ -1,8 +1,7 @@
 package org.springframework.test.ioc;
 
 import org.junit.Test;
-import org.springframework.beans.factory.context.ApplicationContext;
-import org.springframework.beans.factory.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.bean.Person;
 
 /**

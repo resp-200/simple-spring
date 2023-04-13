@@ -1,10 +1,7 @@
 package org.springframework.test.bean;
 
-import org.springframework.beans.factory.beans.BeansException;
-import org.springframework.beans.factory.beans.factory.DisposableBean;
-import org.springframework.beans.factory.beans.factory.InitializingBean;
-import org.springframework.beans.factory.context.ApplicationContext;
-import org.springframework.beans.factory.context.ApplicationContextAware;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
 /**
  * @author derekyi

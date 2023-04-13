@@ -1,7 +1,7 @@
 package org.springframework.test.common;
 
-import org.springframework.beans.factory.beans.BeansException;
-import org.springframework.beans.factory.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.test.bean.Car;
 
 /**
