@@ -1,7 +1,9 @@
 package org.springframework.test.ioc;
 
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.bean.Car;
 import org.springframework.test.bean.Person;
 
 /**
@@ -16,5 +18,13 @@ public class BeanScopeTest {
         Person person = (Person)applicationContext.getBean("person");
         Person person2 = (Person)applicationContext.getBean("person");
         System.out.println(person == person2);
+    }
+
+    @Test
+    public void factoryBeanTest(){
+        ClassPathXmlApplicationContext applicationContext =
+                new ClassPathXmlApplicationContext("classpath:factory-bean.xml");
+        Car car = applicationContext.getBean("car", Car.class);
+        System.out.println(car);
     }
 }
