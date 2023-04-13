@@ -19,4 +19,6 @@
 
     <bean id="customBeanFactoryPostProcessor" class="org.springframework.test.common.CustomBeanFactoryPostProcessor"/>
     <bean id="customBeanPostProcessor" class="org.springframework.test.common.CustomBeanPostProcessor"/>
+
+    <bean id="helloService" class="org.springframework.test.service.HelloService"/>
 </beans>
