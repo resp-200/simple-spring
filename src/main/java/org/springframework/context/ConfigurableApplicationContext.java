@@ -21,4 +21,9 @@ public interface ConfigurableApplicationContext extends ApplicationContext {
 	 * 关闭
 	 */
 	void registerShutdownHook();
+
+	/**
+	 * 关闭应用上下文
+	 */
+	void close();
 }
