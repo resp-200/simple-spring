@@ -35,9 +35,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
 
     @Override
     public void registerShutdownHook() {
-        Thread shutdownHook = new Thread(()->{
-            doClose();
-        });
+        Thread shutdownHook = new Thread(this::doClose);
         Runtime.getRuntime().addShutdownHook(shutdownHook);
     }
 
